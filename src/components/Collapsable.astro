@@ -1,0 +1,25 @@
+---
+interface Props {
+  id: number
+  question: string
+  answer: string
+}
+
+const { id, question, answer } = Astro.props
+---
+
+<article class="border-b-[1px] border-black first:border-t-[1px]">
+  <button
+    id={`panel${id}`}
+    class="accordion relative flex w-full cursor-pointer justify-between border-0 p-6 text-left text-2xl font-semibold leading-normal tracking-tight text-[#010205] outline-none transition duration-[400ms] after:float-right after:ml-5 after:mt-1 after:font-bold after:text-black after:content-['_+']"
+  >
+    <span class="inline-block max-w-[450px]">{question}</span>
+  </button>
+  <div
+    class="panel transition-max-height max-h-0 transform overflow-hidden px-6 duration-[400ms]"
+  >
+    <p class="py-6 text-base font-medium leading-[180%] text-[#878C91]">
+      {answer}
+    </p>
+  </div>
+</article>

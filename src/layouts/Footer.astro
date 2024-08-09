@@ -1,0 +1,102 @@
+---
+import EmailIcon from '@/components/icons/EmailIcon.astro'
+import FacebookLogoIcon from '@/components/icons/FacebookLogoIcon.astro'
+import InstagramLogoIcon from '@/components/icons/InstagramLogoIcon.astro'
+import LinkedInLogoIcon from '@/components/icons/LinkedInLogoIcon.astro'
+import LocationDotIcon from '@/components/icons/LocationDotIcon.astro'
+import PhoneIcon from '@/components/icons/PhoneIcon.astro'
+import TwitterLogoIcon from '@/components/icons/TwitterLogoIcon.astro'
+---
+
+<footer class="footer px-4 pb-14 pt-20">
+  <div
+    class="container mx-auto flex w-auto columns-2 flex-col items-center justify-center gap-8 lg:flex-row lg:gap-x-24"
+  >
+    <div
+      class="flex max-w-[500px] flex-col items-center gap-[30px] lg:items-start"
+    >
+      <a href="#">
+        <img
+          src="/images/logotipo.svg"
+          alt="boostim footer logo"
+          class="h-14 w-auto"
+        />
+      </a>
+      <p>
+        We offers a comprehensive suite of digital marketing services that cover
+        all aspects of our online presence. From SEO and social media marketing
+        to content creation and PPC advertising, they have the expertise and
+        resources to handle our diverse marketing needs.
+      </p>
+      <ul class="flex flex-row gap-3">
+        <li>
+          <a
+            href="#"
+            class="grid h-[34px] w-[34px] place-items-center rounded-full bg-white"
+            ><FacebookLogoIcon />
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="grid h-[34px] w-[34px] place-items-center rounded-full bg-white"
+            ><TwitterLogoIcon />
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="grid h-[34px] w-[34px] place-items-center rounded-full bg-white"
+            ><LinkedInLogoIcon />
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="grid h-[34px] w-[34px] place-items-center rounded-full bg-white"
+            ><InstagramLogoIcon />
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="flex flex-col gap-14 md:columns-3 md:flex-row lg:gap-28">
+      <div class="flex min-w-fit flex-col items-center gap-3 lg:items-start">
+        <h3 class="mb-10 font-bold">Navigation</h3>
+        <ul class="flex flex-col items-center gap-6 lg:items-start">
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Agency</a></li>
+          <li><a href="#">Case Study</a></li>
+          <li><a href="#">Resource</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="flex min-w-fit flex-col items-center gap-3 lg:items-start">
+        <h3 class="mb-10 font-bold">License</h3>
+        <ul class="flex flex-col items-center gap-6 lg:items-start">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Copyright</a></li>
+          <li><a href="#">Email Address</a></li>
+        </ul>
+      </div>
+      <div class="flex w-64 flex-col items-center gap-3 lg:items-start">
+        <h3 class="mb-10 font-bold">Contact</h3>
+        <ul class="flex flex-col items-center gap-6 lg:items-start">
+          <li class="flex flex-row items-start gap-[10px]">
+            <PhoneIcon />
+            <a href="#">(406) 555-0120</a>
+          </li>
+          <li class="flex flex-row items-start gap-[10px]">
+            <EmailIcon />
+            <a href="#">Hey@boostim.com</a>
+          </li>
+          <li class="flex flex-row items-start gap-[10px]">
+            <LocationDotIcon class="w-10" />
+            <a href="#" class="text-center lg:text-left"
+              >2972 Westheimer Rd. Santa Ana, Illinois 85486
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,26 @@
+---
+import Navbar from '../components/Navbar.astro'
+import Layout from '../layouts/Layout.astro'
+import CTABanner from '../sections/CTABanner.astro'
+import Footer from '../layouts/Footer.astro'
+import MktSection from '../sections/MktSection.astro'
+import HeroSection from '../sections/HeroSection.astro'
+import ServicesSection from '../sections/ServicesSection.astro'
+import Portfolio from '../sections/portfolio.astro'
+import MktFAQs from '../layouts/MktFAQs.astro'
+import TestimonialSection from '../sections/TestimonialSection.astro'
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <Navbar />
+    <HeroSection />
+    <ServicesSection />
+    <Portfolio />
+    <TestimonialSection />
+    <MktFAQs />
+    <MktSection />
+    <CTABanner />
+    <Footer />
+  </main>
+</Layout>

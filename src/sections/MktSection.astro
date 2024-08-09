@@ -1,0 +1,67 @@
+---
+import PostCard, { postTypeValue } from '../components/PostCard.astro'
+
+const mktPosts = [
+  {
+    timeToRead: '5 min read',
+    title: 'How a Digital Marketing Agency Can Boost Your Business',
+    postType: postTypeValue.blog,
+    description:
+      'We are the top digital marketing agency for  branding corp. We offer a full rang engine ...'
+  },
+  {
+    timeToRead: '5 min read',
+    title: 'The Latest Trends and Strategies with a Digital Marketing Agency',
+    postType: postTypeValue.project,
+    description:
+      'Working with this digital marketing agency has been a true partnership. They have taken the time to understand our business and industry'
+  },
+  {
+    timeToRead: '5 min read',
+    title: 'Maximizing ROI with the Expertise of a Digital Marketing Agency',
+    postType: postTypeValue.note,
+    description:
+      'What sets this digital marketing agency apart is their commitment to transparency and collaboration. They keep us informed every step of the way,'
+  }
+]
+---
+
+<section
+  class="container mx-auto flex flex-col items-center justify-center gap-6 px-4 py-20"
+>
+  <div
+    class="flex flex-col gap-4 md:max-w-xl lg:grid lg:max-w-fit lg:grid-flow-col lg:grid-rows-3 lg:px-32"
+  >
+    <h2
+      class="row-span-3 max-w-[685px] text-[32px] font-bold leading-[130%] text-[#010205]"
+    >
+      Digital Marketing & SEO ServicesThat Grow Traffic & Increase Revenue
+    </h2>
+    <p
+      class="col-span-2 row-span-2 max-w-[555px] text-[16px] font-medium leading-[180%] text-[#878C91]"
+    >
+      We are the top digital marketing agency for branding corp. We offer a full
+      range of services to help clients improve their search engine rankings and
+      drive more traffic to their websites.
+    </p>
+    <a
+      href="#"
+      class="col-span-2 grid h-14 w-[156px] cursor-pointer place-items-center overflow-hidden rounded-[70px] border-[1px] border-[#010205] bg-white font-bold text-[#010205] transition duration-300 hover:bg-[#010205] hover:text-white"
+      >See More</a
+    >
+  </div>
+  <div
+    class="container mx-auto flex flex-col items-center justify-center gap-6 py-20 lg:flex-row"
+  >
+    {
+      mktPosts.map(post => (
+        <PostCard
+          timeToRead={post.timeToRead}
+          title={post.title}
+          postType={post.postType}
+          description={post.description}
+        />
+      ))
+    }
+  </div>
+</section>

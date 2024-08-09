@@ -1,0 +1,154 @@
+<nav
+  class="relative flex items-center justify-between bg-white p-6 lg:justify-between lg:bg-inherit xl:flex-row xl:pl-20 xl:pr-[62px]"
+>
+  <!-- Mobile menu button -->
+  <div class="block lg:hidden">
+    <button
+      id="menu-toggle"
+      class="text-gray-700 hover:text-black"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+      aria-controls="menu"
+    >
+      <svg
+        class="h-6 w-6"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        role="img"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobile-menu"
+    class="absolute left-0 top-16 hidden w-full bg-white lg:hidden"
+  >
+    <ul class="flex flex-col items-center space-y-4 p-4">
+      {
+        ['Service', 'Agency', 'Case study', 'Resources', 'Contact'].map(
+          item => (
+            <li>
+              <a
+                href="#"
+                class="flex items-center font-semibold text-gray-800 hover:text-black"
+              >
+                {item}
+                <svg
+                  class="ml-4 hidden md:ml-8 md:block"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 7.5L10 12.5L15 7.5"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          )
+        )
+      }
+    </ul>
+  </div>
+
+  <!-- Desktop menu -->
+  <div class="flex w-full content-center items-center lg:w-auto">
+    <a
+      href="/"
+      class="ml-8 flex items-center text-2xl font-bold text-black lg:ml-0"
+    >
+      <img src="/images/logotipo.svg" alt="Boostim Logo" />
+    </a>
+    <ul class="ml-10 flex hidden space-x-6 lg:flex">
+      {
+        ['Service', 'Agency', 'Case study', 'Resources', 'Contact'].map(
+          item => (
+            <li>
+              <a
+                href="#"
+                class="flex items-center text-gray-700 hover:text-black"
+              >
+                {item}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 7.5L10 12.5L15 7.5"
+                    stroke="black"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </li>
+          )
+        )
+      }
+    </ul>
+  </div>
+
+  <!-- Desktop buttons -->
+  <div class="flex hidden items-center space-x-4 lg:flex">
+    <a
+      href="#"
+      class="rounded-full border border-gray-600 px-4 py-2 text-gray-700 hover:text-black"
+      >Get started</a
+    >
+    <button
+      class="rounded-full bg-black p-0 text-white"
+      aria-label="Open notifications"
+    >
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 50 50"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="50" height="50" rx="25" fill="#010205"></rect>
+        <path
+          d="M31 21C31 19.4087 30.3679 17.8826 29.2426 16.7574C28.1174 15.6321 26.5913 15 25 15C23.4087 15 21.8826 15.6321 20.7574 16.7574C19.6321 17.8826 19 19.4087 19 21C19 28 16 30 16 30H34C34 30 31 28 31 21Z"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+        <path
+          d="M26.73 34C26.5542 34.3031 26.3019 34.5547 25.9982 34.7295C25.6946 34.9044 25.3504 34.9965 25 34.9965C24.6496 34.9965 24.3054 34.9044 24.0018 34.7295C23.6982 34.5547 23.4458 34.3031 23.27 34"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </button>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle script
+  const menuToggle = document.getElementById('menu-toggle') as HTMLButtonElement
+
+  menuToggle.addEventListener('click', function () {
+    const menu = document.getElementById('mobile-menu') as HTMLDivElement
+    menu.classList.toggle('hidden')
+  })
+</script>

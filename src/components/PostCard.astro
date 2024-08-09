@@ -1,0 +1,51 @@
+---
+export enum postTypeValue {
+  blog = 'blog',
+  project = 'project',
+  note = 'note'
+}
+
+interface Props {
+  title: string
+  postType: postTypeValue
+  timeToRead: string
+  description: string
+}
+
+const {
+  timeToRead,
+  title,
+  postType = postTypeValue.blog,
+  description
+} = Astro.props
+
+const postTypeColor: Record<postTypeValue, string> = {
+  blog: 'bg-[#45A7DE]',
+  project: 'bg-[#EA5F38]',
+  note: 'bg-[#6A26F1]'
+}
+---
+
+<article class="flex max-w-[410px] flex-col gap-14 rounded-[20px] bg-white p-8">
+  <div class="flex flex-col gap-6">
+    <p class="flex flex-row items-center justify-between">
+      <span class={`rounded-full h-[14px] w-[14px] ${postTypeColor[postType]}`}
+      ></span>
+      <span class="text-[14px] text-[#878C91]">{timeToRead}</span>
+    </p>
+    <h2 class="text-[26px] font-semibold tracking-tight text-[#010205]">
+      {title}
+    </h2>
+  </div>
+  <div class="flex flex-row items-center justify-between gap-2">
+    <p
+      class="line-clamp-3 h-[65px] max-w-[220px] text-[14px] font-medium text-[#878C91]"
+    >
+      {description}
+    </p>
+    <a
+      href="#"
+      class="relative h-14 w-full min-w-[65px] max-w-[88px] cursor-pointer overflow-hidden rounded-[70px] border-[1px] border-[#010205] bg-white bg-[url(/images/arrow-right.webp)] bg-[length:24px_24px] bg-center bg-no-repeat before:inset-0 before:bg-[#010205] hover:before:absolute hover:before:inset-0 hover:before:bg-[url(/images/arrow-right-white.webp)] hover:before:bg-center hover:before:bg-no-repeat"
+    ></a>
+  </div>
+</article>

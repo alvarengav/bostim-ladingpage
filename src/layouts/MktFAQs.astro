@@ -1,0 +1,96 @@
+---
+import Collapsable from '../components/Collapsable.astro'
+
+const FAQs = [
+  {
+    id: 1,
+    question: 'Why is digital marketing important for my business?',
+    answer:
+      'Digital marketing allows businesses to reach and engage with a wider audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize their strategies based on data and insights.'
+  },
+  {
+    id: 2,
+    question: 'How can digital marketing help improve my website`s visibility?',
+    answer:
+      'Digital marketing allows businesses to reach and engage with a wider audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize their strategies based on data and insights.'
+  },
+  {
+    id: 3,
+    question:
+      'How long does it take to see results from digital marketing efforts?',
+    answer:
+      'Digital marketing allows businesses to reach and engage with a wider audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize their strategies based on data and insights.'
+  },
+  {
+    id: 4,
+    question: 'How do you measure the success of digital marketing campaigns?',
+    answer:
+      'Digital marketing allows businesses to reach and engage with a wider audience, generate leads, drive website traffic, and increase brand visibility. It provides measurable results, allows for targeted marketing efforts, and enables businesses to adapt and optimize their strategies based on data and insights.'
+  }
+]
+---
+
+<section
+  class="mx-4 flex flex-col gap-12 rounded-[28px] bg-white px-5 py-12 xl:container lg:flex-row lg:px-20 lg:py-16 xl:mx-auto"
+>
+  <div class="flex w-full max-w-[530px] flex-col gap-12">
+    <h3
+      class="block text-[32px] font-semibold leading-[130%] tracking-tight text-[#010205] md:min-w-[380px] md:text-5xl xl:w-max"
+    >
+      Digital Marketing FAQs
+    </h3>
+    <p class="text-base font-medium leading-[180%] text-[#878C91]">
+      As a leading digital marketing agency, we are dedicated to providing
+      comprehensive educational resources and answering frequently asked
+      questions to help our clients.
+    </p>
+    <div class="flex flex-col items-center justify-start gap-12 md:flex-row">
+      <a
+        href="#"
+        class="rounded-[50px] border-2 border-[#010205] px-7 py-4 text-base font-bold leading-[140%] tracking-[-2%] transition duration-300 hover:bg-[#010205] hover:text-white"
+        >More Questions</a
+      >
+      <a
+        href="#"
+        class="text-base font-bold leading-[140%] tracking-[-2%] hover:underline"
+        >Contanct Us</a
+      >
+    </div>
+  </div>
+  <div class="max-w-[630px]">
+    {
+      FAQs.map(faq => (
+        <Collapsable id={faq.id} question={faq.question} answer={faq.answer} />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .active:after {
+    content: '\2212';
+  }
+</style>
+
+<script is:inline>
+  document.querySelectorAll('.accordion').forEach(el =>
+    el.addEventListener('click', function () {
+      // Close all other accordion elements
+      document.querySelectorAll('.accordion').forEach(otherEl => {
+        if (otherEl !== el) {
+          otherEl.classList.remove('active')
+          const otherPanel = otherEl.nextElementSibling
+          otherPanel.style.maxHeight = null
+        }
+      })
+
+      // eslint-disable-next-line prettier/prettier
+      // Toggle the clicked element
+      el.classList.toggle('active')
+      const panel = this.nextElementSibling
+      panel.style.maxHeight = panel.style.maxHeight
+        ? null
+        : panel.scrollHeight + 'px'
+    })
+  )
+</script>

@@ -1,0 +1,146 @@
+---
+import ArrowRightIcon from '../components/icons/ArrowRightIcon.astro'
+import GrowthBarsIcon from '../components/icons/GrowthBarsIcon.astro'
+import TrendingUpIcon from '../components/icons/TrendingUpIcon.astro'
+---
+
+<section
+  class="flex flex-col items-center px-4 py-8 lg:justify-between lg:py-24 xl:flex-row xl:pl-20 xl:pr-[62px]"
+>
+  <!-- Text Section -->
+  <div class="mb-8 w-full flex-1 md:max-w-[592px] lg:mb-0">
+    <h1
+      class="mb-6 text-center text-3xl font-semibold leading-[1.1] -tracking-[0.03em] text-primary lg:text-left lg:text-6xl"
+      aria-label="Stay ahead of the curve with our forward-thinking"
+    >
+      Stay ahead of the curve with our <br class="hidden lg:block" /> forward-thinking
+    </h1>
+    <p
+      class="mb-6 w-full text-center text-base font-medium text-muted md:max-w-[558px] lg:text-left lg:text-lg"
+    >
+      An award-winning SEO agency with disciplines in digital marketing, design,
+      and website development, focused on understanding you.
+    </p>
+    <div
+      class="flex flex-col items-center space-y-4 lg:mt-12 lg:flex-row lg:items-center lg:gap-14 lg:space-y-0"
+    >
+      <button
+        class="rounded-full bg-primary px-6 py-3 font-semibold text-white hover:bg-gray-800"
+        aria-label="Schedule a call"
+      >
+        Schedule Call <ArrowRightIcon
+          class="ml-4 inline-block"
+          aria-hidden="true"
+        />
+      </button>
+
+      <a
+        href="#"
+        class="inline-block font-semibold text-primary underline lg:ml-0"
+      >
+        View Case Study
+      </a>
+    </div>
+
+    <div
+      class="bg-background-light mt-8 flex flex-col items-center justify-between lg:mt-24 lg:flex-row"
+    >
+      <p
+        class="mb-4 w-full text-center text-sm font-semibold text-primary md:max-w-[150px] lg:mb-0 lg:text-left"
+      >
+        Trusted by the world's biggest brands
+      </p>
+      <div
+        class="flex flex-wrap justify-center gap-6 lg:flex-nowrap lg:gap-0 lg:space-x-7"
+      >
+        <img
+          src="/images/brands/afterpay-logo.svg"
+          alt="Afterpay Logo"
+          class="h-auto w-[108px]"
+        />
+        <img
+          src="/images/brands/basecamp-logo.svg"
+          alt="Basecamp Logo"
+          class="h-auto w-[114px]"
+        />
+        <img
+          src="/images/brands/maze-logo.svg"
+          alt="Maze Logo"
+          class="h-auto w-[98px]"
+        />
+      </div>
+    </div>
+  </div>
+  <!-- Image/Graphic Section -->
+  <div
+    class="mt-8 flex w-full flex-1 flex-col space-y-4 md:mx-0 md:max-w-[592px] lg:mt-24 lg:max-w-[588px] xl:mt-0 xl:space-y-6"
+  >
+    <div
+      class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 lg:space-y-0"
+    >
+      <!-- Block 1 -->
+      <div
+        class="relative flex h-48 w-full items-center justify-center sm:h-auto lg:w-[303px]"
+      >
+        <!-- Quarter Circle -->
+        <div
+          class="absolute left-0 top-0 h-full w-full overflow-hidden bg-gray-200"
+          style="border-radius: 1000px 20px 60px 20px;"
+        >
+          <div class="h-full w-full bg-bgSecondary"></div>
+        </div>
+        <!-- Icon -->
+        <div
+          class="md: absolute -top-8 right-6 flex h-[70px] w-[70px] items-center justify-center rounded-full bg-primary p-2 shadow-deep md:right-10 lg:h-[101px] lg:w-[101px] lg:p-4"
+        >
+          <TrendingUpIcon class="text-accent" />
+        </div>
+      </div>
+      <!-- Block 2 -->
+      <div class="flex-1 rounded-[20px] bg-gray-light p-4 sm:pt-[38px]">
+        <h2
+          class="max-h-[63px] text-[60px] font-bold leading-none -tracking-[0.03em] text-primary lg:text-[84px]"
+        >
+          230+
+        </h2>
+        <p class="mt-4 font-medium text-muted-dark lg:mt-10">
+          Some big companies that we work with, and trust us very much.
+        </p>
+        <div class="relative mt-4 h-1.5 w-full bg-gray-300 lg:mt-[38px]">
+          <div
+            class="absolute left-0 top-0 h-full bg-black"
+            style="width: 75%;"
+          >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Block 3 -->
+    <div
+      class="bg-superbly relative flex flex-col justify-between rounded-[20px] text-white lg:h-[216px] lg:flex-row"
+    >
+      <div class="ml-4 mt-8 max-w-[280px] flex-1 lg:ml-8 lg:mt-12">
+        <h3 class="flex items-center text-sm">
+          <div class="mr-4 w-[54px] border-t border-white"></div>
+          Drive More Traffic and Sales
+        </h3>
+        <p
+          class="mt-2 text-[28px] font-semibold leading-[1.3] -tracking-[0.02em] lg:text-[32px]"
+        >
+          Drive more traffic and product sales
+        </p>
+      </div>
+      <div class="mr-4 mt-8 flex self-end lg:mr-6 lg:mt-0">
+        <GrowthBarsIcon class="block" />
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .bg-superbly {
+    content: '';
+    background-image: url('/images/img2.jpg');
+    background-size: cover;
+    background-position: bottom left;
+  }
+</style>
